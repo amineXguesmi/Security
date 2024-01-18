@@ -8,13 +8,13 @@ run `sudo apt update` `sudo apt install bind9`
 
 run `sudo nano /etc/resolv.conf`
 
-![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2063.png)
+![Untitled](files/Untitled%2063.png)
 
 ### create a forward zone
 
 run `sudo nano /etc/bind/named.conf.local`
 
-![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2064.png)
+![Untitled](files/Untitled%2064.png)
 
 ### create file to contain the hosts :
 
@@ -24,7 +24,7 @@ run
 
  `sudo nano /etc/bind/zones/db.insat.tn`
 
-![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2065.png)
+![Untitled](files/Untitled%2065.png)
 
 ### restart bind service :
 
@@ -38,10 +38,10 @@ run
 
 run `/usr/sbin/named -g -c /etc/bind/named.conf -u bind`
 
-![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2066.png)
+![Untitled](files/Untitled%2066.png)
 
 ### Test the DNS server
 
 use the command `nslookup` to test the dns server
 
-![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2067.png)
+![Untitled](files/Untitled%2067.png)
