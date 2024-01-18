@@ -1,15 +1,15 @@
-1-**Install Apache2:**
+ 1-**Install Apache2:**
     
     - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2030.png)
+        ![Untitled](pics/Untitled%2030.png)
         
     
     2-**Enable required modules** `mod_ldap` and `mod_authnz_ldap` and restart apache
     
     - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2031.png)
+        ![Untitled](pics/Untitled%2031.png)
         
     
     3-**Configure LDAP Authentication for a Directory or Location**:
@@ -18,22 +18,22 @@
     
     - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2032.png)
+        ![Untitled](pics/Untitled%2032.png)
         
     - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2033.png)
+        ![Untitled](pics/Untitled%2033.png)
         
     
     3.2- Configure the config file for Ldap authentication:
     
     - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2034.png)
+        ![Untitled](pics/Untitled%2034.png)
         
     - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2035.png)
+        ![Untitled](pics/Untitled%2035.png)
         
     
     • `AuthType Basic`: Specifies the type of authentication. We use Basic here.
@@ -53,5 +53,3 @@
     - Screenshot
         
         ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2036.png)
-        
-    
