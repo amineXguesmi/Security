@@ -91,8 +91,18 @@
 
 
 5. **Adding SSL Certificates**
+- On ajoute les certificats
 
-    - Create an LDIF file named `ssl_ldap.ldif` to add SSL certificates
+![Untitled](files2/Untitled%201.png)
+
+![Untitled](files2/Untitled%202.png)
+
+![Untitled](files2/Untitled%203.png)
+
+
+  ![Untitled](files2/Untitled%206.png)
+
+- Create an LDIF file named `ssl_ldap.ldif` to add SSL certificates
       ![testldap](files/sslldap.png)
 
     - Execute the following command to add SSL certificates:
@@ -182,6 +192,12 @@ ldapwhoami -x -D "cn=anas chaibi,ou=users,dc=insat,dc=tn" -W
 - You can now perform LDAP queries and log in from the client machine.
 ![testclient](files2/testclient.png)
 
+We can login with the user we created in the LDAP server
+
+![loginclientldap](files2/loginclientldap.png)
+
+
+
 
 
 Pour tester LDAP Directory on éxecute la commande suivante :
@@ -189,23 +205,7 @@ Pour tester LDAP Directory on éxecute la commande suivante :
 
 ![Untitled](files2/Untitled.png)
 
-- On ajoute les certificats
 
-![Untitled](files2/Untitled%201.png)
-
-![Untitled](files2/Untitled%202.png)
-
-![Untitled](files2/Untitled%203.png)
-
-![Untitled](files2/Untitled%204.png)
-
-- On modifie ensuite le fichier /etc/default/slapd
-
-![Untitled](files2/Untitled%205.png)
-
-- On modifie aussi /etc/ldap/ldap.conf
-
-  ![Untitled](files2/Untitled%206.png)
 
    - Maintenant on peut utiliser ldaps
 
