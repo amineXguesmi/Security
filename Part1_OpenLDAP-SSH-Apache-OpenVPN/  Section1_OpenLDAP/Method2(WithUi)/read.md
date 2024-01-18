@@ -61,17 +61,39 @@
       sudo a2enconf php*-cgi
       ```
 
+- We can now access the LDAP Account Manager (LAM) web interface by visiting `http://SERVER_IP/lam` in a web browser.
+- Log in with the default credentials: (lam, lam)
+- We can add users and groups from the web interface.
+- We can managae users and groups from the web interface.
+
+
+
    ![Untitled](files/Untitled.png)
-   ![Different digests but both refer to word “Bonjour”](images/Untitled%201.png)
    ![Untitled](files/Untitled%201.png)
    ![Untitled](files/Untitled%202.png)
    ![Untitled](files/Untitled%203.png)
    ![Untitled](files/Untitled%204.png)
    ![Untitled](files/Untitled%205.png)
 
+
+[//]: # (Pour tester LDAP Directory on éxecute la commande suivante :)
+
+[//]: # (ldapsearch -x -LLL -H ldap:/// -b dc=insat,dc=tn '&#40;uid=user1&#41;')
+
+- Pour tester LDAP Directory on éxecute la commande suivante :
+
+  ```bash
+  ldapsearch -x -LLL -H ldap:/// -b dc=insat,dc=tn '(uid=user1)'
+  ```
+
+  ![testldap](files/testldap.png)
+
+
+
 5. **Adding SSL Certificates**
 
-    - Create an LDIF file named `ssl_ldap.ldif` to add SSL certificates (details not provided in this document).
+    - Create an LDIF file named `ssl_ldap.ldif` to add SSL certificates
+      ![testldap](files/sslldap.png)
 
     - Execute the following command to add SSL certificates:
 
@@ -81,9 +103,34 @@
 
 6. **Configuring LDAPS**
 
-    - Modify the `/etc/default/slapd` file and configure LDAPS (details not provided in this document).
+- Modify the `/etc/default/slapd` file and configure LDAPS 
 
-    - Modify the `/etc/ldap/ldap.conf` file for LDAPS (details not provided in this document).
+[//]: # (  add ldapps:// to the SLAPD_SERVICES variable)
+
+- Modify the `/etc/default/slapd` file and configure LDAPS
+
+  - add `ldaps:///`  to the SLAPD_SERVICES variable
+
+
+- Modify the `/etc/ldap/ldap.conf` file for LDAPS 
+  - change  `TLS_REQCERT ` to `TLS_REQCERT allow` 
+
+- we can now test LDAPS
+
+  ```bash
+  ldapsearch -x -H ldaps://192.168.56.102 -b "dc=insat,dc=tn" ```
+
+![testldaps](files/testldaps.png)
+
+
+- Les utilisateurs peuvent s’authentifier avec succés sur le serveur OpenLDAP
+
+```bash 
+ldapwhoami -x -D "cn=anas chaibi,ou=users,dc=insat,dc=tn" -W
+```
+![testldapwhoami](files2/testldapwhoami.png)
+
+
 
 7. **Configuring Client Machine**
 
@@ -96,7 +143,7 @@
       Add an entry like this:
 
       ```
-      SERVER_IP server.insat.tn server
+      192.168.152.102 server.insat.tn server
       ```
 
     - You should now be able to ping the server from the client machine.
@@ -109,17 +156,32 @@
       sudo apt install libnss-ldap libpam-ldap ldap-utils nscd -y
       ```
 
-    - Configure `/etc/nsswitch.conf` for LDAP (details not provided in this document).
+- we set the LDAP server URI to `ldap://192.168.152.10` and the search base to `dc=insat,dc=tn`
 
-    - Add the necessary line to `/etc/pam.d/common-session` for LDAP authentication (details not provided in this document).
 
-    - You can now perform LDAP queries and log in from the client machine.
 
-    - To test LDAPS, execute the following command:
+    - Configure `/etc/nsswitch.conf` for LDAP .
+          
+        - Add Or modify  the following lines to the `/etc/nsswitch.conf` file:
+    
+          ```
+          passwd:         files systemd ldap
+          group:          files systemd ldap
+          shadow:         files ldap
+          gshadow:        files
+          ```
 
-      ```bash
-      ldapsearch -x -H ldaps://server.insat.tn -b dc=insat,dc=tn '(uid=user1)'
-      ```
+    - Add the necessary line to `/etc/pam.d/common-session` for LDAP authentication 
+    
+        - Add the following line to `/etc/pam.d/common-session`:
+    
+          ```
+          session required pam_mkhomedir.so skel=/etc/skel/ umask=077
+          ```
+
+- You can now perform LDAP queries and log in from the client machine.
+![testclient](files2/testclient.png)
+
 
 
 Pour tester LDAP Directory on éxecute la commande suivante :
