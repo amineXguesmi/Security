@@ -47,11 +47,11 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     - `apt install openvpn easy-rsa`
         
-        ![image_2024-01-18_130347113.png](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/image_2024-01-18_130347113.png)
+        ![image_2024-01-18_130347113.png](files/image_2024-01-18_130347113.png)
         
         once we installed the openvpn we go to /etc/openvpn  
         
-        ![image_2024-01-18_130638129.png](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/image_2024-01-18_130638129.png)
+        ![image_2024-01-18_130638129.png](filesimage_2024-01-18_130638129.png)
         
     
     - `make-cadir /etc/openvpn/easy-rsa`
@@ -60,7 +60,7 @@ Section 4 : Mise en place d'OpenVPN (15 points)
         
         once we created it , we go to /etc/openvpn/easy-rsa
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2037.png)
+        ![Untitled](files/Untitled%2037.png)
         
     
     ## **Step 2: Generate Certificates :**
@@ -71,67 +71,67 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     `./easyrsa init-pki`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2038.png)
+    ![Untitled](files/Untitled%2038.png)
     
     **build the Certificate Authority (CA) for your Public Key Infrastructure (PKI). This command initiates the process of creating the root CA certificate and associated   private key** 
     
     `./easyrsa build-ca`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2039.png)
+    ![Untitled](files/Untitled%2039.png)
     
     **you enter Ca key passPhrase    (in my case : kali )** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2040.png)
+    ![Untitled](files/Untitled%2040.png)
     
     **once it s done the ca certificat is created** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2041.png)
+    ![Untitled](files/Untitled%2041.png)
     
     **and the ca key is created   ( in private )** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2042.png)
+    ![Untitled](files/Untitled%2042.png)
     
     **generate Diffie-Hellman (DH) parameters for key exchange in the context of SSL/TLS encryption : (take some time )** 
     
     `./easyrsa gen-dh`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2043.png)
+    ![Untitled](files/Untitled%2043.png)
     
     **once it s done the dh.pem is created** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2044.png)
+    ![Untitled](files/Untitled%2044.png)
     
     **Generate a Certificate Request (server) :** 
     
     `./easyrsa gen-req INSAT nopass`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2045.png)
+    ![Untitled](files/Untitled%2045.png)
     
     **once it s done we can see in /etc/openvpn/easy-rsa/pki/reqs** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2046.png)
+    ![Untitled](files/Untitled%2046.png)
     
     **Sign the Certificate Request (server):**
     
     `./easyrsa sign-req server INSAT`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2047.png)
+    ![Untitled](files/Untitled%2047.png)
     
     **once it s created we can see the INSAT.crt in /etc/openvpn/easy-rsa/pki/issued** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2048.png)
+    ![Untitled](files/Untitled%2048.png)
     
     **Generate a Certificate Request (client) :** 
     
     **`./easyrsa gen-req amine nopass`**
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2049.png)
+    ![Untitled](files/Untitled%2049.png)
     
     **Sign the Certificate Request (client):**
     
     `./easyrsa sign-req client amine`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2050.png)
+    ![Untitled](files/Untitled%2050.png)
     
     ## **Step 3: Configure OpenVPN (server):**
     
@@ -147,7 +147,7 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     `sudo nano  /etc/openvpn/server/server.conf`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2051.png)
+    ![Untitled](files/Untitled%2051.png)
     
     **generate a shared secret key file (`ta.key`) for OpenVPN in (/etc/openvpn/ )**
     
@@ -155,13 +155,13 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     once it s done we can see :
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2052.png)
+    ![Untitled](files/Untitled%2052.png)
     
     **configure the server.conf : we put the location of the server req and cert and ca and ta :**
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2053.png)
+    ![Untitled](files/Untitled%2053.png)
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2054.png)
+    ![Untitled](files/Untitled%2054.png)
     
     **enable the OpenVPN service with a specific configuration file (`server.conf` )**
     
@@ -175,7 +175,7 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     **`openvpn --config server.conf`**
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2055.png)
+    ![Untitled](files/Untitled%2055.png)
     
     **in case of error (address already in use ) run this command and then start the server again** 
     
@@ -191,17 +191,17 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     `sudo nano /etc/openvpn/client/client.conf`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2056.png)
+    ![Untitled](files/Untitled%2056.png)
     
     **configure the client.conf : we put the location of the server req and cert and ca and ta :**
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2057.png)
+    ![Untitled](files/Untitled%2057.png)
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2058.png)
+    ![Untitled](files/Untitled%2058.png)
     
     **start the client.conf** 
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2059.png)
+    ![Untitled](files/Untitled%2059.png)
     
     ## **Step 4: Implement LDAP Authorization :**
     
@@ -209,7 +209,7 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     `mkdir /etc/openvpn/auth`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2060.png)
+    ![Untitled](files/Untitled%2060.png)
     
     **create file ldap-auth.conf and configuration** 
     
@@ -303,10 +303,10 @@ Section 4 : Mise en place d'OpenVPN (15 points)
     
     `openvn --config server.conf`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2061.png)
+    ![Untitled](files/Untitled%2061.png)
     
     start the client :
     
     `openvpn —config client.conf`
     
-    ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2062.png)
+    ![Untitled](files/Untitled%2062.png)
