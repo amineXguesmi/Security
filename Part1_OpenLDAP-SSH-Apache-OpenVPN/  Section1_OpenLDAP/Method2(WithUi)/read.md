@@ -121,3 +121,49 @@
       ldapsearch -x -H ldaps://server.insat.tn -b dc=insat,dc=tn '(uid=user1)'
       ```
 
+
+Pour tester LDAP Directory on éxecute la commande suivante :
+`ldapsearch -x -LLL -H ldap:/// -b dc=insat,dc=tn '(uid=user1)'`
+
+![Untitled](files2/Untitled.png)
+
+- On ajoute les certificats
+
+![Untitled](files2/Untitled%201.png)
+
+![Untitled](files2/Untitled%202.png)
+
+![Untitled](files2/Untitled%203.png)
+
+![Untitled](files2/Untitled%204.png)
+
+- On modifie ensuite le fichier /etc/default/slapd
+
+![Untitled](files2/Untitled%205.png)
+
+- On modifie aussi /etc/ldap/ldap.conf
+
+  ![Untitled](files2/Untitled%206.png)
+
+   - Maintenant on peut utiliser ldaps
+
+     ![Untitled](files2/Untitled%207.png)
+
+      - Les utilisateurs peuvent s’authentifier avec succés sur le serveur OpenLDAP
+
+        ![Untitled](files2/Untitled%208.png)
+
+         - we can ping the server too
+
+Now, let's talk about the advantages of LDAPS (LDAP over SSL/TLS):
+
+1. **Communication Encryption:**
+   LDAPS uses SSL/TLS to encrypt communications between the client and the LDAP server, ensuring data confidentiality during transit.
+2. **Secure Authentication:**
+   LDAPS provides secure authentication, meaning that login credentials are transmitted securely, reducing the risk of credential theft.
+3. **Data Integrity:**
+   The SSL/TLS layer ensures the integrity of data exchanged between the client and the server. This prevents unauthorized tampering with information during transit.
+4. **Protection Against Passive Eavesdropping:**
+   LDAPS protects against passive eavesdropping, where an attacker could intercept network traffic to retrieve sensitive information.
+5. **Compliance with Security Standards:**
+   The use of LDAPS aligns with best security practices and industry standards for securing LDAP communications.
