@@ -51,7 +51,7 @@ Section 4 : Mise en place d'OpenVPN (15 points)
         
         once we installed the openvpn we go to /etc/openvpn  
         
-        ![image_2024-01-18_130638129.png](filesimage_2024-01-18_130638129.png)
+        ![image_2024-01-18_130638129.png](files/image_2024-01-18_130638129.png)
         
     
     - `make-cadir /etc/openvpn/easy-rsa`
