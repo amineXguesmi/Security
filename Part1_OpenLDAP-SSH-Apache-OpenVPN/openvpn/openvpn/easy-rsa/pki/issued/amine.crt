@@ -1,0 +1,85 @@
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            f8:8f:00:0b:da:5b:46:d3:f2:d3:38:97:02:ba:d0:82
+        Signature Algorithm: sha256WithRSAEncryption
+        Issuer: CN=www.insatGl4.tn
+        Validity
+            Not Before: Jan 18 12:38:57 2024 GMT
+            Not After : Jan  2 12:38:57 2027 GMT
+        Subject: CN=www.insatGl4.tn
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                RSA Public-Key: (2048 bit)
+                Modulus:
+                    00:cb:95:02:b4:43:4a:56:a7:96:a1:08:fc:4f:7a:
+                    29:24:0c:7e:13:2b:41:af:e9:db:44:30:26:34:76:
+                    b6:78:72:ed:33:c7:4f:76:72:73:41:a3:07:42:c8:
+                    ae:1e:5e:eb:b4:f4:11:3a:d2:d9:03:f3:7f:cc:33:
+                    3b:07:cd:01:5b:a0:dd:d0:14:4e:2b:7a:48:e5:b4:
+                    b2:7b:20:0c:a0:77:8e:3b:32:77:0a:9b:49:99:75:
+                    f4:a4:30:d3:95:98:05:dc:54:17:b1:c0:21:89:3e:
+                    b9:cd:01:44:01:f5:73:48:dd:de:3c:20:83:dd:af:
+                    36:25:a6:e6:5b:0b:e5:a3:e0:ce:57:d4:c9:22:c9:
+                    5a:66:c4:97:f3:75:90:c5:c3:ba:dc:2c:7a:bb:51:
+                    6c:9a:29:7d:ee:df:81:de:1f:af:9c:d6:a9:71:99:
+                    27:60:fa:a3:1f:4b:63:a6:87:7b:38:4d:52:0c:16:
+                    6e:d3:ad:50:19:ed:28:f6:0b:a3:d4:29:d6:9e:8d:
+                    d0:f4:39:56:e4:e2:67:9d:92:0d:d5:a4:e5:d9:6d:
+                    33:c4:30:e8:76:a2:34:f4:59:b8:76:e0:1e:10:9b:
+                    bb:76:c2:fa:12:d5:59:90:48:e6:6c:41:d7:47:4a:
+                    68:51:42:f6:07:f3:83:e2:6f:f3:76:99:54:ac:28:
+                    62:8f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Basic Constraints: 
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                7B:02:4D:A0:66:59:D3:24:21:59:B8:75:E8:96:33:0E:69:53:99:BA
+            X509v3 Authority Key Identifier: 
+                keyid:36:62:46:CC:98:01:65:72:E8:2B:44:2E:41:5A:C6:7B:76:C7:F8:ED
+                DirName:/CN=www.insatGl4.tn
+                serial:38:28:D7:63:34:29:92:BB:EE:27:A5:BC:30:48:0B:A9:60:BC:B6:26
+
+            X509v3 Extended Key Usage: 
+                TLS Web Client Authentication
+            X509v3 Key Usage: 
+                Digital Signature
+    Signature Algorithm: sha256WithRSAEncryption
+         a7:94:af:9d:ef:2b:bc:f9:e8:3c:a8:ab:0c:d9:11:f8:5d:47:
+         cc:48:ed:fd:e5:7e:4d:dc:c3:0a:45:e4:a2:95:12:b7:49:06:
+         f2:0e:a2:91:f8:61:9d:f1:02:6f:b6:d5:c6:8f:a1:43:85:1b:
+         1f:35:27:31:e6:7d:25:e8:45:1a:f5:a1:27:9e:c0:fa:5d:10:
+         2f:18:8f:27:c6:4d:63:46:6b:52:19:6d:d0:9b:c8:4c:ec:e4:
+         c1:0a:59:c0:c2:4a:30:99:4e:cf:00:c8:e4:9c:43:13:28:ce:
+         9c:57:83:57:d6:a3:a9:92:75:7d:bf:4a:21:3e:98:22:b4:28:
+         1e:d8:27:94:f7:b1:e3:b3:07:41:ca:b6:30:14:61:76:e7:e4:
+         03:3f:45:86:e0:26:99:35:6d:78:01:9b:91:b7:2c:39:cb:66:
+         9d:f1:f2:50:25:91:81:2f:21:4c:ae:da:7a:ab:d6:ea:1d:c9:
+         c3:82:ea:e8:9c:d1:53:f0:d5:9e:bb:c1:80:68:49:64:b7:35:
+         38:0d:16:14:85:a7:b2:4b:46:56:d9:52:3c:59:89:21:84:f0:
+         cf:cb:21:b8:7e:b8:03:93:ac:3f:c3:46:62:82:23:54:6e:85:
+         a5:4a:d2:8b:33:36:79:af:f2:64:34:d7:59:3e:ac:f3:d5:67:
+         a6:ce:ec:d9
+-----BEGIN CERTIFICATE-----
+MIIDZjCCAk6gAwIBAgIRAPiPAAvaW0bT8tM4lwK60IIwDQYJKoZIhvcNAQELBQAw
+GjEYMBYGA1UEAwwPd3d3Lmluc2F0R2w0LnRuMB4XDTI0MDExODEyMzg1N1oXDTI3
+MDEwMjEyMzg1N1owGjEYMBYGA1UEAwwPd3d3Lmluc2F0R2w0LnRuMIIBIjANBgkq
+hkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAy5UCtENKVqeWoQj8T3opJAx+EytBr+nb
+RDAmNHa2eHLtM8dPdnJzQaMHQsiuHl7rtPQROtLZA/N/zDM7B80BW6Dd0BROK3pI
+5bSyeyAMoHeOOzJ3CptJmXX0pDDTlZgF3FQXscAhiT65zQFEAfVzSN3ePCCD3a82
+JabmWwvlo+DOV9TJIslaZsSX83WQxcO63Cx6u1Fsmil97t+B3h+vnNapcZknYPqj
+H0tjpod7OE1SDBZu061QGe0o9guj1CnWno3Q9DlW5OJnnZIN1aTl2W0zxDDodqI0
+9Fm4duAeEJu7dsL6EtVZkEjmbEHXR0poUUL2B/OD4m/zdplUrChijwIDAQABo4Gm
+MIGjMAkGA1UdEwQCMAAwHQYDVR0OBBYEFHsCTaBmWdMkIVm4deiWMw5pU5m6MFUG
+A1UdIwROMEyAFDZiRsyYAWVy6CtELkFaxnt2x/jtoR6kHDAaMRgwFgYDVQQDDA93
+d3cuaW5zYXRHbDQudG6CFDgo12M0KZK77ielvDBIC6lgvLYmMBMGA1UdJQQMMAoG
+CCsGAQUFBwMCMAsGA1UdDwQEAwIHgDANBgkqhkiG9w0BAQsFAAOCAQEAp5Svne8r
+vPnoPKirDNkR+F1HzEjt/eV+TdzDCkXkopUSt0kG8g6ikfhhnfECb7bVxo+hQ4Ub
+HzUnMeZ9JehFGvWhJ57A+l0QLxiPJ8ZNY0ZrUhlt0JvITOzkwQpZwMJKMJlOzwDI
+5JxDEyjOnFeDV9ajqZJ1fb9KIT6YIrQoHtgnlPex47MHQcq2MBRhdufkAz9FhuAm
+mTVteAGbkbcsOctmnfHyUCWRgS8hTK7aeqvW6h3Jw4Lq6JzRU/DVnrvBgGhJZLc1
+OA0WFIWnsktGVtlSPFmJIYTwz8shuH64A5OsP8NGYoIjVG6FpUrSizM2ea/yZDTX
+WT6s89Vnps7s2Q==
+-----END CERTIFICATE-----
