@@ -1,5 +1,3 @@
-Sure, I've corrected and enhanced the Markdown file to make it more comprehensive. Below is the updated version:
-
 ## Section 1
 
 ### Enoncé
