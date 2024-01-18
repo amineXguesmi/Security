@@ -52,4 +52,4 @@
     
    - Screenshot
         
-        ![Untitled](Security%20GL4%202b4a1420bcc445e480f013d3f3de320b/Untitled%2036.png)
+        ![Untitled](pics/Untitled%2036.png)
