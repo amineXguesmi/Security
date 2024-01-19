@@ -60,7 +60,7 @@ This guide outlines the steps for configuring a Kerberos server and a client mac
    ```bash
    sudo apt install krb5-user
    ```
-   ![krb5-user Installation](images/Untitled%2023.png)
+![krb5-user Installation](images/Untitled%2023.png)
 ![krb5-user Installation](images/Untitled%2024.png)
 ![krb5-user Installation](images/Untitled%2025.png)
 
