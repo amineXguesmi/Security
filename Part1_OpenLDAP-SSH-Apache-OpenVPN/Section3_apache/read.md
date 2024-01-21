@@ -50,7 +50,7 @@
 
    - Screenshot
         
-        ![Untitled](pics/Untitled%2038.png)
+        ![Untitled](pics/Untitled%2038.PNG)
     
    4-Testing:
     
