@@ -44,7 +44,13 @@
     
    • `AuthLDAPURL`: Specifies the URL of your LDAP server. This includes the server address, the base DN to search.
     
-   Our configuration here is for group authentication
+   Our configuration here is for group authentication.Now sadly this configuration won't work because of the way we configured our groups initially, it   
+   should've been posixGroup instead of groupOfNames. To solve this, we can use user authentication like we did instead of group authentication, all you have 
+   to do is to change the conf file like this.  
+
+   - Screenshot
+        
+        ![Untitled](pics/Untitled%2038.png)
     
    4-Testing:
     
